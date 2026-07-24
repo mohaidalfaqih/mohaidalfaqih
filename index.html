@@ -38,11 +38,23 @@
 
         <li><a href="#projects" class="nav-link">Proyek</a></li>
 
-        <li><a href="#final-project" class="nav-link">Proyek Akhir</a></li>
+        <li><a href="#certificates" class="nav-link">Sertifikat</a></li>
+
+        <li><a href="#cv" class="nav-link">CV</a></li>
 
         <li><a href="#contact" class="nav-link">Kontak</a></li>
 
       </ul>
+
+      <div class="nav-right">
+
+        <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
+
+          <i id="darkIcon" class="fa-solid fa-moon"></i>
+
+        </button>
+
+      </div>
 
       <button class="hamburger" id="hamburger" aria-label="Menu">
 
@@ -308,7 +320,7 @@
 
   </section>
 
-  <!-- PROJECTS (UI/UX FIGMA) -->
+  <!-- MY PROJECTS -->
 
   <section class="projects section" id="projects">
 
@@ -318,17 +330,27 @@
 
         <span class="section-tag">Portofolio</span>
 
-        <h2 class="section-title">Proyek UI/UX Figma</h2>
+        <h2 class="section-title">My Projects</h2>
 
-        <p class="section-sub">Desain antarmuka yang saya buat menggunakan Figma</p>
+        <p class="section-sub">Semua proyek yang telah saya kerjakan</p>
 
       </div>
 
-      <div class="projects-grid">
+      <!-- FILTER TABS -->
+      <div class="proj-tabs">
+
+        <button class="proj-tab active" data-filter="all">Semua</button>
+
+        <button class="proj-tab" data-filter="uiux">UI/UX Design</button>
+
+        <button class="proj-tab" data-filter="web">Web Development</button>
+
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
 
         <!-- Project 1: POS RWP Cloud -->
-
-        <div class="project-card" data-aos="fade-up">
+        <div class="project-card" data-category="uiux">
 
           <div class="project-img project-img-1">
 
@@ -372,9 +394,9 @@
 
             <p class="project-desc">
 
-              Desain UI/UX sistem Point of Sale berbasis cloud untuk manajemen transaksi penjualan secara real-time. 
+              Desain UI/UX sistem Point of Sale berbasis cloud untuk manajemen transaksi penjualan secara real-time.
 
-              Dirancang dengan tampilan yang bersih dan alur pengguna yang intuitif untuk kemudahan kasir dan pemilik bisnis.
+              Dirancang dengan tampilan yang bersih dan alur pengguna yang intuitif.
 
             </p>
 
@@ -392,9 +414,8 @@
 
         </div>
 
-        <!-- Project 2: POS & Inventory Brangkas Garage -->
-
-        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+        <!-- Project 2: POS & Inventory Figma -->
+        <div class="project-card" data-category="uiux">
 
           <div class="project-img project-img-2">
 
@@ -438,9 +459,9 @@
 
             <p class="project-desc">
 
-              Desain sistem POS terintegrasi dengan manajemen inventaris untuk bengkel Brangkas Garage. 
+              Desain sistem POS terintegrasi dengan manajemen inventaris untuk bengkel Brangkas Garage.
 
-              Mencakup alur pencatatan stok sparepart, transaksi penjualan, dan laporan keuangan yang lengkap.
+              Mencakup alur pencatatan stok sparepart, transaksi penjualan, dan laporan keuangan.
 
             </p>
 
@@ -458,191 +479,80 @@
 
         </div>
 
-      </div>
+        <!-- Project 3: Brangkas Garage Web (Final Project) -->
+        <div class="project-card project-card-featured" data-category="web">
 
-    </div>
+          <div class="project-img project-img-final">
 
-  </section>
+            <div class="project-overlay">
 
-  <!-- FINAL PROJECT -->
+              <div class="overlay-content">
 
-  <section class="final-project section" id="final-project">
+                <i class="fa-solid fa-laptop-code"></i>
 
-    <div class="container">
+                <p>Web Development</p>
 
-      <div class="section-header">
-
-        <span class="section-tag">Proyek Akhir</span>
-
-        <h2 class="section-title">Karya Terbaik Saya</h2>
-
-      </div>
-
-      <div class="fp-card">
-
-        <div class="fp-badge"><i class="fa-solid fa-star"></i> Proyek Akhir</div>
-
-        <div class="fp-content">
-
-          <div class="fp-left">
-
-            <div class="fp-screen">
-
-              <div class="fp-screen-bar">
-
-                <span></span><span></span><span></span>
+                <a href="https://brangkasgaragepos.kesug.com/" class="overlay-btn" target="_blank" rel="noopener">Live Demo</a>
 
               </div>
 
-              <div class="fp-screen-body">
+            </div>
 
-                <div class="fp-mockup-header">
+            <div class="project-featured-badge"><i class="fa-solid fa-star"></i> Proyek Akhir</div>
 
-                  <i class="fa-solid fa-motorcycle"></i>
+            <div class="project-mockup">
 
-                  <span>Brangkas Garage</span>
+              <i class="fa-solid fa-motorcycle"></i>
 
-                </div>
-
-                <div class="fp-mockup-content">
-
-                  <div class="fp-mock-row"></div>
-
-                  <div class="fp-mock-row short"></div>
-
-                  <div class="fp-mock-cards">
-
-                    <div class="fp-mock-card"></div>
-
-                    <div class="fp-mock-card"></div>
-
-                    <div class="fp-mock-card"></div>
-
-                  </div>
-
-                  <div class="fp-mock-row"></div>
-
-                  <div class="fp-mock-row short"></div>
-
-                </div>
-
-              </div>
+              <span>Brangkas Garage</span>
 
             </div>
 
           </div>
 
-          <div class="fp-right">
+          <div class="project-body">
 
-            <h3 class="fp-title">
+            <div class="project-tags">
 
-              Sistem Informasi dan Transaksi Penjualan Sparepart Motor Berbasis Web
+              <span class="tag tag-php">PHP</span>
 
-            </h3>
+              <span class="tag tag-mysql">MySQL</span>
 
-            <p class="fp-studi">
+              <span class="tag tag-laravel">Laravel</span>
 
-              <i class="fa-solid fa-location-dot"></i>
+            </div>
 
-              Studi Kasus: Brangkas Garage
+            <h3 class="project-title">Sistem Informasi Penjualan Sparepart Motor</h3>
+
+            <p class="project-desc">
+
+              Sistem informasi manajemen berbasis web untuk mendigitalisasi transaksi penjualan sparepart di Brangkas Garage.
+
+              Mencakup POS, manajemen stok, dan laporan keuangan terintegrasi.
 
             </p>
 
-            <p class="fp-desc">
+            <div class="project-features">
 
-              Sistem informasi manajemen berbasis web yang dibangun untuk mendigitalisasi 
+              <div class="feature"><i class="fa-solid fa-check"></i> Transaksi POS Real-time</div>
 
-              proses penjualan sparepart motor di Brangkas Garage. Sistem ini mencakup 
+              <div class="feature"><i class="fa-solid fa-check"></i> Manajemen Stok</div>
 
-              pengelolaan data produk, transaksi penjualan, manajemen stok, serta 
+              <div class="feature"><i class="fa-solid fa-check"></i> Laporan Keuangan</div>
 
-              pelaporan keuangan yang terintegrasi.
-
-            </p>
-
-            <div class="fp-features-grid">
-
-              <div class="fp-feature">
-
-                <i class="fa-solid fa-cart-shopping"></i>
-
-                <div>
-
-                  <strong>Transaksi Penjualan</strong>
-
-                  <p>Pencatatan penjualan sparepart secara digital</p>
-
-                </div>
-
-              </div>
-
-              <div class="fp-feature">
-
-                <i class="fa-solid fa-warehouse"></i>
-
-                <div>
-
-                  <strong>Manajemen Stok</strong>
-
-                  <p>Monitoring inventaris sparepart real-time</p>
-
-                </div>
-
-              </div>
-
-              <div class="fp-feature">
-
-                <i class="fa-solid fa-chart-line"></i>
-
-                <div>
-
-                  <strong>Laporan Keuangan</strong>
-
-                  <p>Rekap pendapatan dan pengeluaran otomatis</p>
-
-                </div>
-
-              </div>
-
-              <div class="fp-feature">
-
-                <i class="fa-solid fa-users"></i>
-
-                <div>
-
-                  <strong>Multi User</strong>
-
-                  <p>Akses berbeda untuk admin dan kasir</p>
-
-                </div>
-
-              </div>
+              <div class="feature"><i class="fa-solid fa-check"></i> Multi User (Admin & Kasir)</div>
 
             </div>
 
-            <div class="fp-tech-stack">
+            <div class="project-actions">
 
-              <span class="tech-badge"><i class="fa-brands fa-php"></i> PHP</span>
+              <a href="https://brangkasgaragepos.kesug.com/" class="btn btn-primary btn-sm" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> Live Demo</a>
 
-              <span class="tech-badge"><i class="fa-solid fa-database"></i> MySQL</span>
-
-              <span class="tech-badge"><i class="fa-brands fa-html5"></i> HTML</span>
-
-              <span class="tech-badge"><i class="fa-brands fa-css3-alt"></i> CSS</span>
-
-              <span class="tech-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <a href="https://github.com/mohaidalfaqih/pos-dan-iventory-brangkas-garage" class="btn btn-outline btn-sm" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source Code</a>
 
             </div>
 
-            <div class="fp-actions">
-
-              <a href="https://brangkasgaragepos.kesug.com/" class="btn btn-primary" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> Live Demo</a>
-
-              <a href="https://github.com/mohaidalfaqih/pos-dan-iventory-brangkas-garage" class="btn btn-outline" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source Code</a>
-
-            </div>
-
-            <div class="demo-credentials">
+            <div class="demo-credentials" style="margin-top:16px;">
 
               <p class="cred-title"><i class="fa-solid fa-key"></i> Akun Demo</p>
 
@@ -681,6 +591,208 @@
     </div>
 
   </section>
+
+  <!-- CERTIFICATES -->
+  <section class="certificates section" id="certificates">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="section-tag">Pencapaian</span>
+
+        <h2 class="section-title">Sertifikat</h2>
+
+        <p class="section-sub">Sertifikat dan penghargaan yang telah saya raih</p>
+
+      </div>
+
+      <div class="cert-grid">
+
+        <!-- Sertifikat 1 -->
+        <div class="cert-card">
+
+          <div class="cert-preview">
+
+            <div class="cert-img-placeholder">
+
+              <i class="fa-solid fa-certificate"></i>
+
+              <span>Quality Assurance</span>
+
+            </div>
+
+          </div>
+
+          <div class="cert-body">
+
+            <h3 class="cert-title">Quality Assurance - QA Engineer</h3>
+
+            <p class="cert-issuer"><i class="fa-solid fa-building"></i> Dibimbing.id</p>
+
+            <p class="cert-date"><i class="fa-solid fa-calendar"></i> 7 Mei 2024</p>
+
+            <div class="cert-actions">
+
+              <button class="btn btn-primary btn-sm" onclick="openCertModal('cert1')">
+
+                <i class="fa-solid fa-eye"></i> Lihat
+
+              </button>
+
+              <a href="files/sertifikat-1.pdf" download class="btn btn-outline btn-sm">
+
+                <i class="fa-solid fa-download"></i> Unduh
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Sertifikat 2 -->
+        <div class="cert-card">
+
+          <div class="cert-preview">
+
+            <div class="cert-img-placeholder">
+
+              <i class="fa-solid fa-certificate"></i>
+
+              <span>Data Analytics</span>
+
+            </div>
+
+          </div>
+
+          <div class="cert-body">
+
+            <h3 class="cert-title">Intro to Data Analytics</h3>
+
+            <p class="cert-issuer"><i class="fa-solid fa-building"></i> RevoU</p>
+
+            <p class="cert-date"><i class="fa-solid fa-calendar"></i> 24 April 2026</p>
+
+            <div class="cert-actions">
+
+              <button class="btn btn-primary btn-sm" onclick="openCertModal('cert2')">
+
+                <i class="fa-solid fa-eye"></i> Lihat
+
+              </button>
+
+              <a href="files/sertifikat-2.pdf" download class="btn btn-outline btn-sm">
+
+                <i class="fa-solid fa-download"></i> Unduh
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CV -->
+  <section class="cv-section section" id="cv">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="section-tag">Curriculum Vitae</span>
+
+        <h2 class="section-title">Download CV Saya</h2>
+
+        <p class="section-sub">Lihat atau unduh CV lengkap saya di bawah ini</p>
+
+      </div>
+
+      <div class="cv-card">
+
+        <div class="cv-left">
+
+          <div class="cv-icon-wrap">
+
+            <i class="fa-solid fa-file-pdf"></i>
+
+          </div>
+
+          <div class="cv-info">
+
+            <h3>Mohammad Aidal Faqih</h3>
+
+            <p>Software Engineer · Web Developer · IT Support</p>
+
+            <span class="cv-filename"><i class="fa-solid fa-paperclip"></i> CV_Mohammad_Aidal_Faqih.pdf</span>
+
+          </div>
+
+        </div>
+
+        <div class="cv-actions">
+
+          <button class="btn btn-primary" onclick="openCVModal()">
+
+            <i class="fa-solid fa-eye"></i> Lihat CV
+
+          </button>
+
+          <a href="files/CV_Mohammad_Aidal_Faqih.pdf" download class="btn btn-outline">
+
+            <i class="fa-solid fa-download"></i> Unduh CV
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MODAL SERTIFIKAT -->
+  <div class="modal-overlay" id="certModal" role="dialog" aria-modal="true" aria-label="Lihat Sertifikat">
+
+    <div class="modal-box">
+
+      <button class="modal-close" id="certModalClose" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+
+      <div class="modal-body">
+
+        <iframe id="certFrame" src="" title="Sertifikat"></iframe>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- MODAL CV -->
+  <div class="modal-overlay" id="cvModal" role="dialog" aria-modal="true" aria-label="Lihat CV">
+
+    <div class="modal-box modal-box-cv">
+
+      <button class="modal-close" id="cvModalClose" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+
+      <div class="modal-body">
+
+        <iframe src="files/CV_Mohammad_Aidal_Faqih.pdf" title="CV Mohammad Aidal Faqih"></iframe>
+
+      </div>
+
+    </div>
+
+  </div>
 
   <!-- CONTACT -->
 
