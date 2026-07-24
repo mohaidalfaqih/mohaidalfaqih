@@ -134,9 +134,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // CERTIFICATE MODAL
 // ===========================
 const certFiles = {
-  cert1: 'files/sertifikat-1.pdf',
-  cert2: 'files/sertifikat-2.pdf',
-  cert3: 'files/sertifikat-3.pdf',
+  cert1: 'sertifikat-1.pdf',
+  cert2: 'sertifikat-2.pdf',
 };
 
 const certModal      = document.getElementById('certModal');
